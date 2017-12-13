@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#282828"
+    android:padding="10dp"
+    android:id="@+id/connect">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
+
+        <TextView android:text="no data" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/status"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColorHint="#A9A9A9"
+            android:background="#5d5d5d"
+            android:digits="0123456789.:"
+            android:padding="10dp"
+            android:hint="SERVER IP"
+            android:textSize="20sp"
+            android:id="@+id/edtserver"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColorHint="#A9A9A9"
+            android:background="#5d5d5d"
+            android:padding="10dp"
+            android:text=""
+            android:hint="INSTANCE"
+            android:textSize="20sp"
+            android:id="@+id/edtinstance" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:digits="0123456789.:"
+            android:textColorHint="#A9A9A9"
+            android:background="#5d5d5d"
+            android:padding="10dp"
+            android:hint="PORT"
+            android:textSize="20sp"
+            android:id="@+id/edtport"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColorHint="#A9A9A9"
+            android:background="#5d5d5d"
+            android:padding="10dp"
+            android:hint="DATABASE"
+            android:textSize="20sp"
+            android:id="@+id/edtdb" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textColorHint="#A9A9A9"
+            android:background="#5d5d5d"
+            android:padding="10dp"
+            android:hint="USERNAME"
+            android:textSize="20sp"
+            android:id="@+id/edtuserid" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="PASSWORD"
+            android:textColor="#ffffff"
+            android:textColorHint="#A9A9A9"
+            android:textStyle="bold"
+            android:background="#5d5d5d"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="5dp"
+            android:id="@+id/edtpass" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/pbbar" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:typeface="sans"
+        android:textSize="25sp"
+        android:textColor="#00aa55"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:background="#ff13a609"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:id="@+id/btnConnect"
+        android:text="Connect"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="#ffff0014"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/btnRefresh"
+        android:text="Refresh"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/btnConnect"
+        android:layout_alignEnd="@+id/linearLayout" />
+</RelativeLayout>

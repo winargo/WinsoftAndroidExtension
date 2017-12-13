@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:id="@+id/rkp2ll1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:id="@+id/rkp2tanggal"
+            android:textAlignment="center"
+            android:text="tanggal"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:id="@+id/rkp2pay"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="ck"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/rkp2faktur"
+            android:text="no-faktur"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/rkp2jk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="JK"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:text="customer name"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:id="@+id/rkp2cust"/>
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/rkp2ll1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+    <LinearLayout
+        android:id="@+id/rkp2ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rkp2ll1"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/rkp2sales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="sales"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/rkp2subtotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="subtotals"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/rkp2disc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:text="Disc"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/rkp2ppn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:text="ppn"
+            android:gravity="center"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/rkp2exp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="EXP"
+            android:gravity="center"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/rkp2id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="ID"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/rkp2ll1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+    <TextView
+        android:layout_marginTop="10sp"
+        android:id="@+id/rkp2total"
+        android:textSize="9pt"
+        android:layout_below="@+id/rkp2ll2"
+        android:layout_width="match_parent"
+        android:layout_height="22sp"
+        android:layout_marginBottom="20sp"
+        android:text="jumlah"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAlignment="center" />
+    <View
+        android:layout_below="@+id/rkp2total"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="20sp"
+        android:background="#000000"/>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llotor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:id="@+id/hiddendate"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:id="@+id/otordate"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:text="tanggal"
+            android:layout_toEndOf="@+id/otordate" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:id="@+id/otorid"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="ID"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/otormodul"
+            android:text="modul"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/llotor"
+        android:background="#D3D3D3"/>
+
+
+    <Button
+        android:id="@+id/otorbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:background="@drawable/button"
+        android:text="Allow"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="11dp"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentEnd="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/llotor"
+        android:id="@+id/linearLayout2">
+    <TextView
+        android:id="@+id/otorketerangan"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:text="keterangan"/>
+    </LinearLayout>
+</RelativeLayout>

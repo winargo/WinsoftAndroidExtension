@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.global.winsoftandroidextension.info_maincheckingstock">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/infostockname"
+                android:paddingLeft="20sp"
+                android:paddingTop="5sp"
+                android:textStyle="bold"
+                android:paddingBottom="5sp"
+                android:text="Nama Stock"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5sp"
+                android:id="@+id/line1"
+                android:layout_below="@+id/infostockname"
+                android:background="#000000"/>
+            <LinearLayout
+                android:paddingTop="8px"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:id="@+id/ill2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ill2sub1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="Produk  :"/>
+                    <TextView
+                        android:id="@+id/infoproduk"
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="no data"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_marginLeft="8sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5sp"
+                    android:id="@+id/line2"
+                    android:layout_below="@+id/ill2sub1"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:padding="8px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ill2sub2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="15sp"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="Satuan  :"/>
+                    <TextView
+                        android:id="@+id/infosatuan"
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="No data"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="8sp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ill2"
+                android:id="@+id/ill3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ill3sub1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Harga Beli :"/>
+                    <TextView
+                        android:id="@+id/infohargabeli"
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_weight="0.9"
+                        android:text="no data"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:text="Ongkos kirim :"/>
+                    <TextView
+                        android:id="@+id/infoongkir"
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="No data"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_marginLeft="8sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5sp"
+                    android:id="@+id/line3"
+                    android:layout_below="@+id/ill3sub1"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ill3sub2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Harga Jual        :"/>
+                    <TextView
+                        android:id="@+id/infohargajual"
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="No data"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/ill3"
+                android:id="@+id/ill4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ill4sub1"
+                    android:layout_marginBottom="20sp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Minimum :"/>
+                    <TextView
+                        android:id="@+id/infominstock"
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="No Data"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Maximum :"/>
+                    <TextView
+                        android:id="@+id/infomaxstock"
+                        android:textStyle="bold"
+                        android:paddingLeft="20sp"
+                        android:layout_width="0sp"
+                        android:layout_weight="1"
+                        android:text="No Data"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5sp"
+                android:id="@+id/line6"
+                android:layout_above="@+id/ill5"
+                android:background="#000000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="150dp"
+                android:id="@+id/ill5"
+                android:orientation="vertical"
+                android:background="@drawable/box">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:padding="10px"
+                        android:textSize="10pt"
+                        android:paddingRight="0px"
+                        android:layout_weight="2"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:text="Info Stock   :       Tanggal"/>
+                    <EditText
+                        android:id="@+id/dt1"
+                        android:focusable="false"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/datalv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="104dp"></ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8sp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ill5">
+
+                <Button
+                    android:layout_marginLeft="12.5sp"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:background="#ff13a609"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:layout_marginRight="15sp"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:id="@+id/btnjual"
+                    android:text="History jual" />
+                <Button
+                    android:layout_marginLeft="12.5sp"
+                    android:layout_marginRight="12.5sp"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:background="#ff13a609"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:id="@+id/btnbeli"
+                    android:text="History beli" />
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@id/pbbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/llhistoryjb"
+                android:layout_width="match_parent"
+                android:minHeight="100dp"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

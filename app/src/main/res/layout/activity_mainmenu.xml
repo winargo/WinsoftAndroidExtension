@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.global.winsoftandroidextension.MainMenu.mainmenu"
+    android:id="@+id/mainmenu"
+    android:background="#ff323435">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/sell"
+        android:background="#ffdadada"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        >
+        <ImageButton
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:scaleType="fitCenter"
+            android:text="Penjualan"
+            android:id="@+id/ibsell"
+            android:width="70pt"
+            android:height="35pt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/penjualan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penjualan"
+            android:layout_marginLeft="50sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffdadada"
+        android:id="@+id/buy">
+        <ImageButton
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:scaleType="fitCenter"
+            android:text="Pembelian"
+            android:id="@+id/ibbuy"
+            android:width="70pt"
+            android:height="35pt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/pembelian"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembelian"
+            android:layout_marginLeft="47sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffdadada"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/buy"
+        android:layout_alignParentStart="true"
+        android:id="@+id/hutang">
+
+        <ImageButton
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:scaleType="fitCenter"
+            android:text="Hutang"
+            android:id="@+id/ibhutang"
+            android:width="70pt"
+            android:height="35pt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/utang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hutang"
+            android:layout_marginLeft="58sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffdadada"
+        android:id="@+id/piutang"
+        android:layout_alignTop="@+id/hutang"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:scaleType="fitCenter"
+            android:text="Piutang"
+            android:id="@+id/ibpiutang"
+            android:width="70pt"
+            android:height="35pt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/piutang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Piutang"
+            android:layout_marginLeft="57sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffdadada"
+        android:layout_marginTop="30dp"
+        android:id="@+id/stock"
+        android:layout_below="@+id/piutang">
+
+        <ImageButton
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:scaleType="fitCenter"
+            android:text="Stock"
+            android:id="@+id/ibstock"
+            android:width="70pt"
+            android:height="35pt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/stock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock"
+            android:layout_marginLeft="61sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffdadada"
+        android:id="@+id/salesman"
+        android:layout_below="@+id/stock"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="3dp">
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Salesman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/stock"
+        android:background="#ffdadada"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ibsalesman"
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:width="70pt"
+            android:height="35pt"
+            android:scaleType="fitCenter"
+            android:src="@drawable/salesman"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="49sp"
+            android:text="Salesman" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffdadada"
+        android:id="@+id/otor"
+        android:layout_below="@+id/salesman"
+        android:layout_toEndOf="@+id/salesman"
+        android:layout_marginTop="28dp">
+
+        <ImageButton
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:scaleType="fitCenter"
+            android:text="Stock"
+            android:id="@+id/ibotor"
+            android:width="70pt"
+            android:height="35pt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/eye" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27sp"
+            android:text="Otorotas Proteksi" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkstock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffdadada"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/otor"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:id="@+id/ibcheckstock"
+            android:layout_width="160sp"
+            android:layout_height="50sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:width="70pt"
+            android:height="35pt"
+            android:scaleType="fitCenter"
+            android:src="@drawable/checkingstock"
+            android:text="Stock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27sp"
+            android:text="Checking Stock" />
+
+    </LinearLayout>
+    <!--
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Piutang"
+    android:id="@+id/piutang"
+    android:width="70pt"
+    android:height="35pt"
+    android:layout_below="@+id/sell"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="23dp" />
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hutang"
+    android:id="@+id/hutang"
+    android:layout_alignTop="@+id/piutang"
+    android:layout_alignStart="@+id/buy"
+    android:layout_alignBottom="@+id/piutang"
+    android:layout_alignParentEnd="true" />
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Stock"
+    android:id="@+id/stock"
+    android:width="70pt"
+    android:height="35pt"
+    android:layout_below="@+id/piutang"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="22dp" />
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Settings"
+    android:width="70pt"
+    android:height="35pt"
+    android:id="@+id/settings"
+    android:layout_alignTop="@+id/stock"
+    android:layout_alignStart="@+id/hutang" />
+
+<ImageButton
+    android:layout_width="180sp"
+    android:layout_height="50sp"
+    android:scaleType="fitCenter"
+    android:text="Penjualan"
+    android:id="@+id/sell"
+    android:width="70pt"
+    android:height="35pt"
+    android:src="@drawable/PENJUALAN"
+    android:layout_alignTop="@+id/stock"
+    android:layout_toEndOf="@+id/stock"
+    android:layout_marginStart="33dp" />
+-->
+</RelativeLayout>

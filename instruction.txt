@@ -1,0 +1,4 @@
+steap for android programm
+1. run query getpass.sql
+2. sql2000 sp4 required for older devices
+3. instances cannot run correctly

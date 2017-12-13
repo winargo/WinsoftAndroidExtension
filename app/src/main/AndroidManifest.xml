@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.global.winsoftandroidextension">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            android:windowSoftInputMode="adjustResize||stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".loginprogram"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".MainMenu.mainmenu"
+            android:label="@string/title_activity_mainmenu" />
+        <activity
+            android:name=".report.Reportpenjualan"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_reportpenjualan" />
+        <activity
+            android:name=".report.reportpembelian"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_reportpembelian" />
+        <activity
+            android:name=".report.reportpiutang"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_reportpiutang" />
+        <activity
+            android:name=".report.reporthutang"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_reporthutang" />
+        <activity
+            android:name=".report.reportstock"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_reportstock" />
+        <activity
+            android:name=".MainMenu.mainpenjualan"
+            android:configChanges="orientation|screenSize"
+            android:label="Penjualan" />
+        <activity
+            android:name=".MainMenu.mainpembelian"
+            android:configChanges="orientation|screenSize"
+            android:label="Pembelian" />
+        <activity
+            android:name=".MainMenu.mainhutang"
+            android:configChanges="orientation|screenSize"
+            android:label="Hutang" />
+        <activity
+            android:name=".MainMenu.mainpiutang"
+            android:configChanges="orientation|screenSize"
+            android:label="Piutang" />
+        <activity
+            android:name=".MainMenu.mainstock"
+            android:configChanges="orientation|screenSize"
+            android:label="Stock" />
+        <activity
+            android:name=".report.reportpenjualan_detail"
+            android:configChanges="orientation|screenSize"
+            android:label="Report Penjualan Detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainMenu.otoritas"
+            android:configChanges="orientation|screenSize"
+            android:label="Otoritas Proteksi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".report.reportpenjualanrekap2baris"
+            android:configChanges="orientation|screenSize"
+            android:label="Rekap Penjualan (2 Baris)" />
+        <activity
+            android:name=".report.reportpembelian_detail"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".report.reportpembelianrekap2baris"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".MainMenu.mainsalesman"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".report.reportsalesmanrekapomset"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".report.reportsalesman_omzetsalesman"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".MainMenu.maincheckingstock"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".info_maincheckingstock" />
+        <activity
+            android:name=".info_historyjb"
+            android:label="@string/title_activity_info_historyjb"></activity>
+    </application>
+
+</manifest>

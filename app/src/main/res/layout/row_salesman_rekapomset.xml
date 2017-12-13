@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20sp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:id="@+id/view2" />
+    <TextView
+        android:id="@+id/number"
+        android:gravity="center"
+        android:layout_width="40sp"
+        android:layout_height="35sp"
+        android:textAlignment="center"
+        android:text="no"/>
+    <LinearLayout
+        android:id="@+id/rkp2ll1"
+        android:orientation="horizontal"
+        android:layout_width="386px"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentRight="@+id/number"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/number">
+
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/salesmancode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:textAlignment="center"
+            android:text="Kode sl"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/salesmanname"
+            android:text="Nama Salesman"
+            android:textAlignment="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rkp2ll2"
+        android:layout_width="386px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rkp2ll1"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+        android:padding="0dp"
+        android:layout_toEndOf="@+id/number">
+
+        <TextView
+            android:id="@+id/salesmansales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Penjualan"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/salesmanretour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Retur"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/salesmanomzet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Omzet"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llsales_rkp2"></LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

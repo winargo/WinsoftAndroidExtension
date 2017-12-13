@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.global.winsoftandroidextension.MainMenu.maincheckingstock">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/cstop"
+        android:layout_margin="15px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Check Stock"
+            android:id="@+id/lltitle"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5sp"
+        android:layout_below="@+id/lltitle"
+        android:background="#000000"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cstop"
+        android:id="@+id/textcheck"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="8pt"
+        android:layout_margin="15px"
+        android:text="Input Data"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/scmid"
+        android:layout_below="@id/textcheck"
+        android:weightSum="1">
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/csbox"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:layout_weight="0.88" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Check"
+            android:id="@+id/btncheck"
+            android:background="#ff13a609"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lodingbar"
+        android:layout_below="@+id/scmid"/>
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="20pt"
+        android:id="@+id/textstock"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/scmid"/>
+    <ListView
+        android:id="@+id/lvcs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textstock"></ListView>
+    <TextView
+        android:layout_below="@+id/lvcs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NB : Sentuh pada kode stock dan lokasi gudang untuk menampilkan informasi tambahan"/>
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="20px"
+        android:id="@+id/hjbtitle"
+        android:textSize="9pt"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="History Jual beli"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Transaksi Ditampilkan"/>
+        <EditText
+            android:id="@+id/hjbhari"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terakhir"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/hjbbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff13a609"
+        android:textColor="#ffffff"
+        android:text="Tampil"
+        android:theme="@style/buttondefault" />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbbarjual"/>
+    <ListView
+        android:id="@+id/lvhjb"
+        android:layout_width="match_parent"
+        android:layout_height="600px"></ListView>
+</LinearLayout>

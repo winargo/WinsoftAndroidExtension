@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.global.winsoftandroidextension.report.reportsalesman_omzetsalesman">
+
+    <LinearLayout
+        android:id="@+id/lsales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/wallet_holo_blue_light"
+        android:orientation="horizontal"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.04"
+            android:gravity="center"
+            android:text="tanggal"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/faktur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="nofaktur"
+            android:textAlignment="center" />
+
+
+        <TextView
+            android:id="@+id/sales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.53"
+            android:gravity="center"
+            android:text="sls"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/customer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="customer"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/penjualan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.28"
+            android:gravity="center"
+            android:text="penjualan"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/retur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.82"
+            android:gravity="center"
+            android:text="retur"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/omzet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="omzet"
+            android:textAlignment="center" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line1"
+        android:layout_below="@+id/lsales"
+        android:background="#000000" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llsalesman_omzet"></LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
