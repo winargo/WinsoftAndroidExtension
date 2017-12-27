@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="500dp"
     android:orientation="vertical">
     <TextView
         android:layout_marginTop="20px"
@@ -46,8 +46,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pbbarjual"/>
-    <ListView
-        android:id="@+id/lvhjb"
-        android:layout_width="match_parent"
-        android:layout_height="600px"></ListView>
+        <ListView
+            android:id="@+id/lvhjb"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:animateLayoutChanges="true"
+            ></ListView>
 </LinearLayout>

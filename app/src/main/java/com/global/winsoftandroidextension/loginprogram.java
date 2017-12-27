@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.content.SharedPreferences;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -50,7 +51,7 @@ public class loginprogram extends AppCompatActivity {
         sqlclass = new SQLclass();
         pblogin = (ProgressBar) findViewById(R.id.pblogin);
         pblogin.setVisibility(View.GONE);
-        edtuserid = (EditText) findViewById(R.id.edtuserid);
+        edtuserid = (AutoCompleteTextView) findViewById(R.id.edtuserid);
         edtpass = (EditText) findViewById(R.id.edtpass);
         shp =this.getSharedPreferences("cache", MODE_PRIVATE);
 

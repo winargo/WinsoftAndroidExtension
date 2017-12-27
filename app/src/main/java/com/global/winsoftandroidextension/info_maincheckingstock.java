@@ -270,6 +270,7 @@ public class info_maincheckingstock extends Activity {
                 e.setText("History Penjualan");
                 pbbarjual.setVisibility(View.GONE);
                 d = (EditText)  temp.findViewById(R.id.hjbhari);
+                d.setText("30");
                 c =(ListView) temp.findViewById(R.id.lvhjb);
                 Button a = (Button) temp.findViewById(R.id.hjbbtn);
                 a.setOnClickListener(new View.OnClickListener() {
@@ -308,6 +309,7 @@ public class info_maincheckingstock extends Activity {
                 e.setText("History Pembelian");
                 pbbarjual.setVisibility(View.GONE);
                 d = (EditText)  temp.findViewById(R.id.hjbhari);
+                d.setText("30");
                 c =(ListView) temp.findViewById(R.id.lvhjb);
                 Button a = (Button) temp.findViewById(R.id.hjbbtn);
                 a.setOnClickListener(new View.OnClickListener() {
@@ -368,10 +370,15 @@ public class info_maincheckingstock extends Activity {
 
             try {
                 ResultSet result = null;
+                String divider="",column="";
                 if (declarator==1){
+                    divider="nama_customer from iamcustomer where kode_customer='";
+                    column="nama_customer";
                      result = sqlclass.querydata("select a.tanggal,a.no_faktur,a.kode_customer as kode,b.qty,b.harga_jual as harga from iatpenjualan1 b join iatpenjualan a on a.no_faktur=b.no_faktur  where b.kode_stock='"+tempkodestock+"' order by a.tanggal desc");
                 }
                 else{
+                    column="nama_supplier";
+                    divider="nama_supplier from iamsupplier where kode_supplier='";
                     result = sqlclass.querydata("select  a.tanggal,a.no_faktur,a.kode_supplier as kode,b.qty,b.harga_beli as harga from iatpembelian1 b join iatpembelian a on a.no_faktur=b.no_faktur  where b.kode_stock='"+tempkodestock+"' order by a.tanggal desc");
                 }
 
@@ -385,17 +392,18 @@ public class info_maincheckingstock extends Activity {
                         datanum.put(SECOND_COLUMN,result.getString("no_faktur"));
 
                         String b ="";
-                        ResultSet name = sqlclass.querydata("select nama_customer from iamcustomer where kode_customer='"+result.getString("kode")+"'");
+                        ResultSet name = sqlclass.querydata("select "+divider+result.getString("kode")+"'");
                         while(name.next()){
-                            datanum.put(THIRD_COLUMN ,name.getString("nama_customer"));
+                            datanum.put(THIRD_COLUMN ,name.getString(column));
                         }
 
                         b = generator.parsedate(result.getString("tanggal"),"3");
                         Log.e("ERRO",b);
                         datanum.put(FIRST_COLUMN, b );
                         String d= formatter.format(result.getInt("harga"));
+                        Log.e("ERRO",d);
                         datanum.put(FIFTH_COLUMN, d);
-                        datanum.put(FOURTH_COLUMN, formatter.format(result.getString("qty")));
+                        datanum.put(FOURTH_COLUMN, formatter.format(result.getInt("qty")));
                         Log.e("Erro" , d.toString());
                         data=true;
                         generator.list.add(datanum);

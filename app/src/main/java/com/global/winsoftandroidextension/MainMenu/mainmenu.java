@@ -17,6 +17,7 @@ import com.global.winsoftandroidextension.MainActivity;
 import com.global.winsoftandroidextension.R;
 import com.global.winsoftandroidextension.SQLclass;
 import com.global.winsoftandroidextension.generator;
+import com.global.winsoftandroidextension.loginprogram;
 
 import java.sql.ResultSet;
 
@@ -256,6 +257,12 @@ public class mainmenu extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.setdb) {
             Intent i = new Intent(mainmenu.this, MainActivity.class);
+            startActivity(i);
+            finish();
+            return true;
+        }
+        if (id == R.id.menulogout) {
+            Intent i = new Intent(mainmenu.this, loginprogram.class);
             startActivity(i);
             finish();
             return true;

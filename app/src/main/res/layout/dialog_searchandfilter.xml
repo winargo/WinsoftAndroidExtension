@@ -8,6 +8,8 @@
     <EditText android:id="@+id/EditBox"
         android:maxLines="1"
         android:lines="1"
+        android:hint="Click here"
+        android:textAlignment="center"
         android:singleLine="true"
         android:layout_height="wrap_content"
         android:layout_width="180dip"

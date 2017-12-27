@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         sqlclass = new SQLclass();
 
         edtuserid = (EditText) findViewById(R.id.edtuserid);
+        edtuserid.setVisibility(View.GONE);
         edtpass = (EditText) findViewById(R.id.edtpass);
+        edtpass.setVisibility(View.GONE);
         edtserver = (EditText) findViewById(R.id.edtserver);
         edtport = (EditText) findViewById(R.id.edtport);
         edtdb = (EditText) findViewById(R.id.edtdb);
@@ -80,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
             String svr = shp.getString("svr","");
             String db = shp.getString("db","");
-            String id = shp.getString("id","" );
-            String pass = shp.getString("pass","");
+            String id = shp.getString("id","sa" );
+            String pass = shp.getString("pass","12345");
             String port = shp.getString("port","");
             String instance = shp.getString("instance","");
             edtdb.setText(db);
