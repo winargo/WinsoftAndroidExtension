@@ -1,8 +1,10 @@
 package com.global.winsoftandroidextension.MainMenu;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -38,7 +40,7 @@ import java.text.*;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class mainpenjualan extends ActionBarActivity {
+public class mainpenjualan extends AppCompatActivity {
 
     String sqldate1="",sqldate2="";
     Calendar myCalendar = Calendar.getInstance();

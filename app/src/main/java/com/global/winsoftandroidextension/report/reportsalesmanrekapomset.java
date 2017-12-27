@@ -1,5 +1,6 @@
 package com.global.winsoftandroidextension.report;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +27,7 @@ import static com.global.winsoftandroidextension.generator.THIRD_COLUMN;
 import static com.global.winsoftandroidextension.generator.SIX;
 
 
-public class reportsalesmanrekapomset extends AppCompatActivity {
+public class reportsalesmanrekapomset extends Activity {
 
 
     String dt1,dt2,sales="";

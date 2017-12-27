@@ -1,13 +1,15 @@
 package com.global.winsoftandroidextension.MainMenu;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -41,7 +43,7 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class mainstock extends ActionBarActivity {
+public class mainstock extends AppCompatActivity {
 
     TextView hw;
     String sqldate1="",sqldate2="";

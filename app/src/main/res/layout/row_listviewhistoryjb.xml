@@ -14,9 +14,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:id="@+id/tanggal"
-            android:text="sales"
+            android:text="12-sep"
             android:textAlignment="center" />
 
 
@@ -27,8 +27,23 @@
             android:layout_weight="1"
             android:id="@+id/faktur"
             android:textAlignment="center"
-            android:text="nofaktur"/>
-
+            android:text="no    faktur"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/hjbcustomer"
+            android:textAlignment="center"
+            android:text="nama customer"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:id="@+id/hjbqty"
+            android:textAlignment="center"
+            android:text="1000"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"

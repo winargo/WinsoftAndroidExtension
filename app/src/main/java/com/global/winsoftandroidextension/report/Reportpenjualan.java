@@ -1,7 +1,8 @@
 package com.global.winsoftandroidextension.report;
 
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -32,7 +33,7 @@ import com.global.winsoftandroidextension.SQLclass;
 import com.global.winsoftandroidextension.generator;
 
 
-public class Reportpenjualan extends ActionBarActivity {
+public class Reportpenjualan extends Activity {
 
     String dt1="",dt2="",value="",valuesales="";
     TextView txtview;
@@ -57,10 +58,6 @@ public class Reportpenjualan extends ActionBarActivity {
 
         sqlclass = new SQLclass();
 
-        txtview= (TextView) findViewById(R.id.totalpenjualan);
-        dt1 = generator.dt1;
-        dt2 = generator.dt2;
-
         query="select * from iatpenjualan where tanggal between '"+ dt1 + "' and '"  + dt2 + "'";
 
         if(!value.trim().equals("nama_customer between '' and ''")){
@@ -71,6 +68,12 @@ public class Reportpenjualan extends ActionBarActivity {
         }
         String filter=" order by tanggal,no_faktur asc";
         query=query+filter;
+
+        txtview= (TextView) findViewById(R.id.totalpenjualan);
+        dt1 = generator.dt1;
+        dt2 = generator.dt2;
+
+
 
         lvpenjualan = (ListView) findViewById(R.id.lvpenjualan);
 

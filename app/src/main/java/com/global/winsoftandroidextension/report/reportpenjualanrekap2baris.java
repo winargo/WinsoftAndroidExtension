@@ -1,5 +1,6 @@
 package com.global.winsoftandroidextension.report;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +20,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class reportpenjualanrekap2baris extends AppCompatActivity {
+public class reportpenjualanrekap2baris extends Activity {
 
     String dt1,dt2;
     TextView txtview;

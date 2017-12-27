@@ -1,9 +1,11 @@
 package com.global.winsoftandroidextension;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.content.SharedPreferences;
 import android.widget.Button;
@@ -20,7 +22,7 @@ import android.view.MenuItem;
 import com.global.winsoftandroidextension.MainMenu.mainmenu;
 
 
-public class loginprogram extends ActionBarActivity {
+public class loginprogram extends AppCompatActivity {
 
     SharedPreferences shp;
     Button btnlogin;

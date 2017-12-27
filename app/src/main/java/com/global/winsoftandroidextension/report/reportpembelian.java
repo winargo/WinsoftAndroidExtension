@@ -1,6 +1,7 @@
 package com.global.winsoftandroidextension.report;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,7 +30,7 @@ import static com.global.winsoftandroidextension.generator.FIRST_COLUMN;
 import static com.global.winsoftandroidextension.generator.THIRD_COLUMN;
 
 
-public class reportpembelian extends ActionBarActivity {
+public class reportpembelian extends Activity {
 
     String dt1,dt2;
     TextView txtview;

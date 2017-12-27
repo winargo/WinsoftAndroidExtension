@@ -1,9 +1,10 @@
 package com.global.winsoftandroidextension.MainMenu;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,7 +27,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 
-public class mainpembelian extends ActionBarActivity {
+public class mainpembelian extends AppCompatActivity {
 
     TextView hw;
     String sqldate1="",sqldate2="";

@@ -1,9 +1,10 @@
 package com.global.winsoftandroidextension.MainMenu;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +21,7 @@ import com.global.winsoftandroidextension.generator;
 import java.sql.ResultSet;
 
 
-public class mainmenu extends ActionBarActivity {
+public class mainmenu extends AppCompatActivity {
 
     LinearLayout btnjual,btnbeli,btnstock,btnhutang,btnpiutang,btnsetting,btnotor,btnsalesman,btncs;
     ImageButton ibsell,ibbuy,ibhutang,ibpiutang,ibstock,ibotor ,ibsalesman,ibcs;

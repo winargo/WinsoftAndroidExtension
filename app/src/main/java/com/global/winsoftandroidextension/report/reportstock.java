@@ -1,7 +1,8 @@
 package com.global.winsoftandroidextension.report;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
-import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,7 +10,7 @@ import android.view.MenuItem;
 import com.global.winsoftandroidextension.R;
 
 
-public class reportstock extends ActionBarActivity {
+public class reportstock extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

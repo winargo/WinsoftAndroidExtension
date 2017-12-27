@@ -1,6 +1,7 @@
 package com.global.winsoftandroidextension.report;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,7 +9,7 @@ import android.view.MenuItem;
 import com.global.winsoftandroidextension.R;
 
 
-public class reportpiutang extends ActionBarActivity {
+public class reportpiutang extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

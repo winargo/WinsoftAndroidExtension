@@ -81,7 +81,7 @@ public class generator extends ListActivity {
     //----------------------------date formatter---------------------------------//
     public static String parsedate(String date,String data){
 
-        if(data=="1"){
+        if(data=="1"){//type konversi 1 - tanggal dari sql ke tanggal format yang kita mau
             Date newDate=null;
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
             try{
@@ -94,7 +94,7 @@ public class generator extends ListActivity {
             date = tempdate;
         }
 
-        if(data=="2"){
+        if(data=="2"){//type konversi 2 - tanggal ke date SQL
             Date newDate=null;
             SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
             try{
@@ -103,6 +103,18 @@ public class generator extends ListActivity {
                 Log.e("ERRO", e.toString());
             }
             format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+            String tempdate = format.format(newDate);
+            date = tempdate;
+        }
+        if(data=="3"){//type konversi 1 - tanggal dari sql ke tanggal format yang kita mau
+            Date newDate=null;
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+            try{
+                newDate = format.parse(date);
+            }catch (Exception e){
+                Log.e("ERRO", e.toString());
+            }
+            format = new SimpleDateFormat("dd-MMM");
             String tempdate = format.format(newDate);
             date = tempdate;
         }
@@ -504,7 +516,7 @@ public static class lvinfosales extends BaseAdapter {
 
     public ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
     Activity activity = new Activity();
-    TextView txtFirst,txtSecond,txtThird;
+    TextView txtFirst,txtSecond,txtThird,txtFourth,txtFifth;
 
     public lvinfosales() {
         list = new ArrayList<HashMap<String, String>>();
@@ -560,15 +572,18 @@ public static class lvinfosales extends BaseAdapter {
             convertView = inflater.inflate(R.layout.row_listviewhistoryjb, null);
 
             txtFirst = (TextView) convertView.findViewById(R.id.tanggal);
-
             txtSecond = (TextView) convertView.findViewById(R.id.faktur);
-            txtThird = (TextView) convertView.findViewById(R.id.hjbjumlah);
+            txtThird = (TextView) convertView.findViewById(R.id.hjbcustomer);
+            txtFourth = (TextView) convertView.findViewById(R.id.hjbqty);
+            txtFifth= (TextView) convertView.findViewById(R.id.hjbjumlah);
         }
 
         HashMap<String, String> map = list.get(position);
         txtFirst.setText(map.get(FIRST_COLUMN));
         txtSecond.setText(map.get(SECOND_COLUMN));
         txtThird.setText(map.get(THIRD_COLUMN));
+        txtFourth.setText(map.get(FOURTH_COLUMN));
+        txtFifth.setText(map.get(FIFTH_COLUMN));
         return convertView;
     }
 }

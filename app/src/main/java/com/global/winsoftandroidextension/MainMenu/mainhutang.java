@@ -1,7 +1,9 @@
 package com.global.winsoftandroidextension.MainMenu;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -10,7 +12,7 @@ import android.widget.TextView;
 import com.global.winsoftandroidextension.R;
 
 
-public class mainhutang extends ActionBarActivity {
+public class mainhutang extends AppCompatActivity {
 
     TextView hw;
     @Override

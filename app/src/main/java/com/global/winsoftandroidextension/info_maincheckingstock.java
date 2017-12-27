@@ -43,6 +43,8 @@ import javax.xml.transform.Result;
 import static com.global.winsoftandroidextension.generator.FIRST_COLUMN;
 import static com.global.winsoftandroidextension.generator.SECOND_COLUMN;
 import static com.global.winsoftandroidextension.generator.THIRD_COLUMN;
+import static com.global.winsoftandroidextension.generator.FOURTH_COLUMN;
+import static com.global.winsoftandroidextension.generator.FIFTH_COLUMN;
 
 public class info_maincheckingstock extends Activity {
 
@@ -283,6 +285,7 @@ public class info_maincheckingstock extends Activity {
                             });
                             a.show();
                         }else{
+                            generator.list.clear();
                         Dolistdata a = new Dolistdata();
                         a.execute("");}
                     }
@@ -320,6 +323,7 @@ public class info_maincheckingstock extends Activity {
                             });
                             a.show();
                         }else{
+                            generator.list.clear();
                              dolistdata = new Dolistdata();
                             dolistdata.execute("");}
                     }
@@ -361,14 +365,14 @@ public class info_maincheckingstock extends Activity {
             int count=0;
             Boolean data=false;
             NumberFormat formatter = new DecimalFormat("###,###,###.##");
-            generator.list.clear();
+
             try {
                 ResultSet result = null;
                 if (declarator==1){
-                     result = sqlclass.querydata("select a.tanggal,a.no_faktur,a.jumlah_faktur_rp from iatpenjualan1 b join iatpenjualan a on a.no_faktur=b.no_faktur  where b.kode_stock='"+tempkodestock+"' order by a.tanggal desc");
+                     result = sqlclass.querydata("select a.tanggal,a.no_faktur,a.kode_customer as kode,b.qty,b.harga_jual as harga from iatpenjualan1 b join iatpenjualan a on a.no_faktur=b.no_faktur  where b.kode_stock='"+tempkodestock+"' order by a.tanggal desc");
                 }
                 else{
-                    result = sqlclass.querydata("select  a.tanggal,a.no_faktur,a.jumlah_faktur_rp from iatpembelian1 b join iatpembelian a on a.no_faktur=b.no_faktur  where b.kode_stock='"+tempkodestock+"' order by a.tanggal desc");
+                    result = sqlclass.querydata("select  a.tanggal,a.no_faktur,a.kode_supplier as kode,b.qty,b.harga_beli as harga from iatpembelian1 b join iatpembelian a on a.no_faktur=b.no_faktur  where b.kode_stock='"+tempkodestock+"' order by a.tanggal desc");
                 }
 
                 while (result.next()){
@@ -381,11 +385,17 @@ public class info_maincheckingstock extends Activity {
                         datanum.put(SECOND_COLUMN,result.getString("no_faktur"));
 
                         String b ="";
-                        b = generator.parsedate(result.getString("tanggal"),"1");
+                        ResultSet name = sqlclass.querydata("select nama_customer from iamcustomer where kode_customer='"+result.getString("kode")+"'");
+                        while(name.next()){
+                            datanum.put(THIRD_COLUMN ,name.getString("nama_customer"));
+                        }
+
+                        b = generator.parsedate(result.getString("tanggal"),"3");
                         Log.e("ERRO",b);
                         datanum.put(FIRST_COLUMN, b );
-                        String d= formatter.format(result.getInt("jumlah_faktur_rp"));
-                        datanum.put(THIRD_COLUMN, d);
+                        String d= formatter.format(result.getInt("harga"));
+                        datanum.put(FIFTH_COLUMN, d);
+                        datanum.put(FOURTH_COLUMN, formatter.format(result.getString("qty")));
                         Log.e("Erro" , d.toString());
                         data=true;
                         generator.list.add(datanum);
