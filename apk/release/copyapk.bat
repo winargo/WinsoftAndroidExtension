@@ -1,0 +1,1 @@
+xcopy D:\Android\project\WinsoftAndroidExtension\apk\release\app-release.apk c:\users\rwina\desktop /S /d

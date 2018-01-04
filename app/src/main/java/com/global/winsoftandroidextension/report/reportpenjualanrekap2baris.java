@@ -22,7 +22,7 @@ import java.util.Date;
 
 public class reportpenjualanrekap2baris extends Activity {
 
-    String dt1,dt2;
+    String dt1="",dt2="";
     TextView txtview;
     SQLclass sqlclass;
     ListView lvpenjualan,lvpenjualandata;
@@ -44,6 +44,9 @@ public class reportpenjualanrekap2baris extends Activity {
         dt1 = generator.dt1;
         dt2 = generator.dt2;
 
+        value = bundle.getString("custr");
+        valuesales = bundle.getString("salesr");
+
         //FILTER QUERY HERE
         query1="select * from iatpenjualan a join iamcustomer c on a.kode_customer=c.kode_customer join iamsalesman d on a.kode_salesman=d.kode_salesman where a.tanggal between '"+ dt1 + "' and '"  + dt2 + "'";
 
@@ -55,6 +58,7 @@ public class reportpenjualanrekap2baris extends Activity {
         }
         String filter=" order by tanggal,no_faktur asc";
         query1=query1+filter;
+        Log.e("EROR",query1);
 
         NumberFormat formatter = new DecimalFormat("###,###,###.##");
         try {

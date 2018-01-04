@@ -53,6 +53,9 @@ public class Reportpenjualan extends Activity {
 
         bundle = getIntent().getExtras();
 
+        dt1 = generator.dt1;
+        dt2 = generator.dt2;
+
         value = bundle.getString("custr");
         valuesales = bundle.getString("salesr");
 
@@ -70,8 +73,7 @@ public class Reportpenjualan extends Activity {
         query=query+filter;
 
         txtview= (TextView) findViewById(R.id.totalpenjualan);
-        dt1 = generator.dt1;
-        dt2 = generator.dt2;
+
 
 
 

@@ -400,7 +400,15 @@ public class info_maincheckingstock extends Activity {
                         b = generator.parsedate(result.getString("tanggal"),"3");
                         Log.e("ERRO",b);
                         datanum.put(FIRST_COLUMN, b );
-                        String d= formatter.format(result.getInt("harga"));
+                        String d="";
+                        if(result.getInt("discount_nilai")!=0) {
+                            int tempdisc = result.getInt("discout_nilai");
+                            tempdisc = tempdisc / result.getInt("qty");
+                             d = formatter.format(result.getInt("harga")-tempdisc);
+                        }
+                        else{
+                            d = formatter.format(result.getInt("harga"));
+                        }
                         Log.e("ERRO",d);
                         datanum.put(FIFTH_COLUMN, d);
                         datanum.put(FOURTH_COLUMN, formatter.format(result.getInt("qty")));
